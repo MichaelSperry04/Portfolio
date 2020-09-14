@@ -1,94 +1,146 @@
 <!DOCTYPE html>
-  <head>
-    <title>Michael Sperry's Resume</title>
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  
-  <div class="header">
-    <div class="row">
-      <div class="col-12"><h1>Michael Sperry</h1></div>
-    </div>
 
-    <div class="row">
-      <div class="col-4"><p>michaelsperry04@gmail.com</p></div>
-      <div class="col-1"><p>||</p></div>
-      <div class="col-7"><p>(814) 573-8349</p></div>
-    </div>
+<head>
+  <title>Michael Sperry's Resume</title>
+  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<script>
+  $('a.skill').click(function() {
+    $(this).toggleClass("active");
+    if ($('.skill[data-skill="all"]').hasClass('active')) {
+      $(".detail-child").addClass("active");
+    } else {
+      $(".detail-child").removeClass("active");
+      $('a.skill').each(function() {
+        if ($(this).hasClass("active")) {
+          var skill = $(this).data("skill");
+          $(".detail-child").each(function() {
+            if ($(this).data("skills").includes(skill)) {
+              $this.addClass("active");
+            }
+          })
+        }
+      })
+    }
+</script>
+
+<body>
+
+  <div class="header">
+    <h1>Michael Sperry</h1>
+    <p>michaelsperry04@gmail.com</p>
+    <p>(814) 573-8349</p>
   </div>
 
-  <body>
-    <div class="row">
-      <div class="col-8">
-        <div class="detail">
-          <h2>Education</h2>
-        
-          <div>
-            <h3>Pennsylvania State University</h3>
-            <h5>2017-2021</h5>
-            <h4>Cumulative GPA: 3.85</h4>
-            <h4>B.S. Engineering Science</h4>
+  <div class="Web-body">
+    <div class="detail-body">
+      <div class="detail-title">Education</div>
+
+      <div class="detail-flex-container">
+        <div class="detail-flex-title">Pennsylvania State University</div>
+        <div class="detail-date">2017-2021</div>
+        <div class="detail-parent">Cumulative GPA: 3.85</div>
+        <div class="detail-parent">
+          B.S. Engineering Science
+
+          <div class="detail-child">
             <ul>
-              <li>Schreyer's Honors College</li>
+              <li data-skills="Design Leadership">
+                Schreyer's Honors College
+                
+                <div class="detail-label-container">
+                  <span class="label-red">Design</span>
+                  <span class="label-green">Leadership</span>
+                </div>
+              </li>
               <li>Honors in Nanotech</li>
             </ul>
-            <h4>B.S. Physics</h4>
-            <h4>Minor Nanotechnology</h4>
           </div>
-  
-          <div>
-            <h3>Crawford County Career and Technical Center</h3>
-            <h5>2014-2017</h5>
-            <h4>Drafting and Design</h4>
-            <h4>Robobots</h4>
-            <h5>2015-2017</h5>
+        </div>
+        <div class="detail-parent">B.S. Physics</div>
+        <div class="detail-parent">Minor Nanotechnology</div>
+      </div>
+
+      <div class="detail-flex-container">
+        <div class="detail-flex-title">Crawford County Career and Technical Center</div>
+        <div class="detail-date">2014-2017</div>
+        <div class="detail-parent">
+          Drafting and Design
+
+          <div class="detail-child">
+            Robobots
+
+            <div class="detail-date">2015-2017</div>
             <ul>
               <li>Lead Engineer</li>
               <li>Best Engineered</li>
               <li>Magic 8 Ball</li>
               <li>Bad Bunny</li>
             </ul>
-         </div>
-  
-          <div>
-            <h3>Conneaut Area Senior High</h3>
-            <h5>2013-2017</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-flex-container">
+        <div class="detail-flex-title">Conneaut Area Senior High</div>
+        <div class="detail-date">2013-2017</div>
+        <div class="detail-parent">
+          <div class="detail-child">
             <ul>
               <li>GPA: 3.85</li>
               <li>National Honor Society</li>
               <li>Lip Sync Champion</li>
             </ul>
           </div>
+        </div>
+      </div>
 
-          <h2>Occupational Experience</h2>
+      <div class="detail-title">Occupational Experience</div>
 
-          <div>
-            <h3>Acutec Precision Aerospace</h3>
-            <h5>2018-Present</h5>
-            <h4>NDT</h4>
+      <div class="detail-flex-container">
+        <div class="detail-flex-title">Acutec Precision Aerospace</div>
+        <div class="detail-date">2018-Present</div>
+        <div class="detail-parent">
+          NDT
+        
+          <div class="detail-child">
             <ul>
               <li>NDT Work Instruction Maintenence and Creation</li>
             </ul>
-            <h4>Continuous Improvement</h4>
+          </div>
+        </div>
+        
+        <div class="detail-parent">
+          Continuous Improvement
+        
+          <div class="detail-child">
             <ul>
               <li>Specification Library</li>
-            <ul>
-              <li>13,000 Specs</li>
-              <li>Over 50,000 Links</li>
-            </ul>
+              <ul>
+                <li>13,000 Specs</li>
+                <li>Over 50,000 Links</li>
+              </ul>
               <li>PPAP</li>
-            <ul>
-               <li>Kanban Trello Process using APIs</li>
-             </ul>
-               <li>Zero Defect</li>
-            <ul>
-              <li>Live NCs</li>
-              <li>PFMEA Library</li>
-              <li>HighQA Bubbling Software</li>
-            </ul>
+              <ul>
+                <li>Kanban Trello Process using APIs</li>
+              </ul>
+              <li>Zero Defect</li>
+              <ul>
+                <li>Live NCs</li>
+                <li>PFMEA Library</li>
+                <li>HighQA Bubbling Software</li>
+              </ul>
               <li>Data Management</li>
             </ul>
-            <h4>Engineering</h4>
+          </div>
+        </div>
+
+        <div class="detail-parent">
+          Engineering
+
+          <div class="detail-child">
             <ul>
               <li>Laser and Dot Peen Marking Fixtures</li>
               <li>Assembly Work Instruction Clean Up</li>
@@ -99,21 +151,30 @@
               <li>Data Management</li>
             </ul>
           </div>
+        </div>
+      </div>
 
-          <div>
-            <h3>Viking Tool and Gage</h3>
-            <h5>2018</h5>
-            <h4>Engineering</h4>
+      <div class="detail-flex-container">
+        <div class="detail-flex-title">Viking Tool and Gage</div>
+        <div class="detail-date">2018</div>
+        <div class="detail-parent">
+          Engineering
+        
+          <div class="detail-child">
             <ul>
               <li>Chain Track Wash Station</li>
               <li>High Volume Presses</li>
               <li>Converted 6' X 3' Adjustable Die Press to Electronic Drawings</li>
             </ul>
           </div>
+        </div>
+      </div>
 
-          <div>
-            <h3>Walt's Tavern</h3>
-            <h5>2014-2017</h5>
+      <div class="detail-flex-container">
+        <div class="detail-flex-title">Walt's Tavern</div>
+        <div class="detail-date">2014-2017</div>
+        <div class="detail-parent">
+          <div class="detail-child">
             <ul>
               <li>Fry Cook</li>
               <li>Time Management Skills</li>
@@ -122,57 +183,62 @@
           </div>
         </div>
       </div>
-
-      <div class="col-4">
-        <h2>Skills and Abilities</h2>
-        <form>
-          <input type="checkbox" id="c#" name="c#" value="c#">
-          <label for="c#">c#</label><br>
-          <input type="checkbox" id="HTML" name="HTML" value="HTML">
-          <label for="HTML">HTML</label><br>
-          <input type="checkbox" id="c++" name="c++" value="c++">
-          <label for="c++">c++</label><br>
-          <input type="checkbox" id="Windows Forms" name="Windows Forms" value="Windows Forms">
-          <label for="Windows Forms">Windows Forms</label><br>
-          <input type="checkbox" id="Design" name="Design" value="Design">
-          <label for="Design">Design</label><br>
-          <input type="checkbox" id="Finite Element Method" name="Finite Element Method" value="Finite Element Method">
-          <label for="Finite Element Method">Finite Element Method</label><br>
-          <input type="checkbox" id="Git" name="Git" value="Git">
-          <label for="Git">Git</label><br>
-          <input type="checkbox" id="Regular Expressions" name="Regular Expressions" value="Regular Expressions">
-          <label for="Regular Expressions">Regular Expressions</label><br>
-          <input type="checkbox" id="Matlab" name="Matlab" value="Matlab">
-          <label for="Matlab">Matlab</label><br>
-          <input type="checkbox" id="Leadership Experience" name="Leadership Experience" value="Leadership Experience">
-          <label for="Leadership Experience">Leadership Experience</label><br>
-          <input type="checkbox" id="GD&T" name="GD&T" value="GD&T">
-          <label for="GD&T">GD&T</label><br>
-          <input type="checkbox" id="CAD Technical Drawings" name="CAD Technical Drawings" value="CAD Technical Drawings">
-          <label for="CAD Technical Drawings">CAD Technical Drawings</label><br>
-          <input type="checkbox" id="ABAQUS" name="ABAQUS" value="ABAQUS">
-          <label for="ABAQUS">ABAQUS</label><br>
-          <input type="checkbox" id="CAD 3D Modeling" name="CAD 3D Modeling" value="CAD 3D Modeling">
-          <label for="CAD 3D Modeling">CAD 3D Modeling</label><br>
-          <input type="checkbox" id="Solidworks API" name="Solidworks API" value="Solidworks API">
-          <label for="Solidworks API">Solidworks API</label><br>
-          <input type="checkbox" id="LINQ" name="LINQ" value="LINQ">
-          <label for="LINQ">LINQ</label><br>
-          <input type="checkbox" id="SQL" name="SQL" value="SQL">
-          <label for="SQL">SQL</label><br>
-          <input type="checkbox" id="css" name="css" value="css">
-          <label for="css">css</label><br>
-          <input type="checkbox" id="Javascript" name="Javascript" value="Javascript">
-          <label for="Javascript">Javascript</label><br>
-        </form>
-
-        <h2>Engineering ABET Skills</h2>
-        <ol>
-          <li>BS</li>
-          <li>More BS</li>
-          <li>Even more BS</li>
-        </ol>
-      </div>
     </div>
-  </body>
+
+    <div class="menu-body">
+      <h2>Skills and Abilities</h2>
+      
+      <form>
+        <input type="checkbox" id="c#" name="c#" value="c#">
+        <label for="c#">c#</label><br>
+        <input type="checkbox" id="HTML" name="HTML" value="HTML">
+        <label for="HTML">HTML</label><br>
+        <input type="checkbox" id="c++" name="c++" value="c++">
+        <label for="c++">c++</label><br>
+        <input type="checkbox" id="Windows_Forms" name="Windows_Forms" value="Windows_Forms">
+        <label for="Windows_Forms">Windows Forms</label><br>
+        <input type="checkbox" id="Design" name="Design" value="Design">
+        <label for="Design">Design</label><br>
+        <input type="checkbox" id="Finite_Element_Method" name="Finite_Element_Method" value="Finite_Element_Method">
+        <label for="Finite_Element_Method">Finite Element Method</label><br>
+        <input type="checkbox" id="Git" name="Git" value="Git">
+        <label for="Git">Git</label><br>
+        <input type="checkbox" id="Regular_Expressions" name="Regular_Expressions" value="Regular_Expressions">
+        <label for="Regular_Expressions">Regular Expressions</label><br>
+        <input type="checkbox" id="Matlab" name="Matlab" value="Matlab">
+        <label for="Matlab">Matlab</label><br>
+        <input type="checkbox" id="Leadership_Experience" name="Leadership_Experience" value="Leadership_Experience">
+        <label for="Leadership_Experience">Leadership Experience</label><br>
+        <input type="checkbox" id="GD&T" name="GD&T" value="GD&T">
+        <label for="GD&T">GD&T</label><br>
+        <input type="checkbox" id="CAD_Technical_Drawings" name="CAD_Technical_Drawings" value="CAD_Technical_Drawings">
+        <label for="CAD_Technical_Drawings">CAD Technical Drawings</label><br>
+        <input type="checkbox" id="ABAQUS" name="ABAQUS" value="ABAQUS">
+        <label for="ABAQUS">ABAQUS</label><br>
+        <input type="checkbox" id="CAD_3D_Modeling" name="CAD_3D_Modeling" value="CAD_3D_Modeling">
+        <label for="CAD_3D_Modeling">CAD 3D Modeling</label><br>
+        <input type="checkbox" id="Solidworks_API" name="Solidworks_API" value="Solidworks_API">
+        <label for="Solidworks_API">Solidworks API</label><br>
+        <input type="checkbox" id="LINQ" name="LINQ" value="LINQ">
+        <label for="LINQ">LINQ</label><br>
+        <input type="checkbox" id="SQL" name="SQL" value="SQL">
+        <label for="SQL">SQL</label><br>
+        <input type="checkbox" id="css" name="css" value="css">
+        <label for="css">css</label><br>
+        <input type="checkbox" id="Javascript" name="Javascript" value="Javascript">
+        <label for="Javascript">Javascript</label><br>
+        <input type="checkbox" id="2D_FET_Fabrication" name="2D_FET_Fabrication" value="2D_FET_Fabrication">
+        <label for="2D_Fet_Fabrication">2D Fet Fabrication</label>
+      </form>
+
+      <h2>Engineering ABET Skills</h2>
+      <ol>
+        <li>BS</li>
+        <li>More BS</li>
+        <li>Even more BS</li>
+      </ol>
+    </div>
+  </div>
+</body>
+
 </html>
