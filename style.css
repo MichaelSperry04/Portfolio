@@ -138,7 +138,7 @@ img{
     display: flex;
     width: 18vw;
     height: auto;
-    margin: 10px 5px;
+    margin: 15px 5px;
     box-shadow: 2.5px 2.5px 5px gray;
 }
 
@@ -168,12 +168,7 @@ img{
     display: flex;
     flex-direction: column;
     box-shadow: 2.5px 2.5px 5px gray;
-    justify-content: left;
-    align-content: left;
-}
-
-.menu-list-container ul{
-    list-style-type: none;
+    align-items: center;
 }
 
 .skill{
@@ -181,7 +176,7 @@ img{
     font-size: 1.5vw;
     border-radius: 5px;
     padding: 3px;
-    margin: 5px 0px;
+    margin: 2.5px 5px;
 }
 
 .skill.active::after {
