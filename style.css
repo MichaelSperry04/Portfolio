@@ -177,6 +177,7 @@ img{
     border-radius: 5px;
     padding: 3px;
     margin: 2.5px 5px;
+    text-align: center;
 }
 
 .skill.active::after {
