@@ -33,8 +33,14 @@
       }
 
       $('div.detail-parent').each(function () {
-        if ($(this).has('div.detail-child:visible').length === 0) {
-          $(this).hide();
+        if ($(this).find('div.detail-child').length) {
+          if ($(this).has('div.detail-child:visible').length === 0) {
+            $(this).hide();
+          }
+        } else{
+          if($('a.skill').hasClass('active')) {
+            $(this).hide();
+          }
         }
       });
 
@@ -387,28 +393,28 @@
 
       <div class="menu-title">Skills and Abilities</div>
       <div class="menu-list-container">
-          <a class="skill blue-skill" data-skill="c#">c#</a>
-          <a class="skill blue-skill" data-skill="HTML">HTML</a>
-          <a class="skill blue-skill" data-skill="c++">c++</a>
-          <a class="skill blue-skill" data-skill="Windows_Forms">Windows Forms</a>
-          <a class="skill green-skill" data-skill="Design">Design</a>
-          <a class="skill red-skill" data-skill="Finite_Element_Method">Finite Element Method</a>
-          <a class="skill blue-skill" data-skill="Git">Git</a>
-          <a class="skill blue-skill" data-skill="Regular_Expressions">Regular Expressions</a>
-          <a class="skill purple-skill" data-skill="Matlab">Matlab</a>
-          <a class="skill green-skill" data-skill="Leadership_Experience">Leadership Experience</a>
-          <a class="skill red-skill" data-skill="GD&T">GD&T</a>
-          <a class="skill red-skill" data-skill="CAD_Technical_Drawings">CAD Technical Drawings</a>
-          <a class="skill red-skill" data-skill="ABAQUS">ABAQUS</a>
-          <a class="skill red-skill" data-skill="CAD_3D_Modeling">CAD 3D Modeling</a>
-          <a class="skill purple-skill" data-skill="Solidworks_API">Solidworks API</a>
-          <a class="skill blue-skill" data-skill="LINQ">LINQ</a>
-          <a class="skill blue-skill" data-skill="SQL">SQL</a>
-          <a class="skill blue-skill" data-skill="css">css</a>
-          <a class="skill blue-skill" data-skill="Javascript">Javascript</a>
-          <a class="skill red-skill" data-skill="FET_Fabrication">FET Fabrication</a>
-          <a class="skill red-skill" data-skill="FET_Characterization">FET Characterization</a>
-          <a class="skill red-skill" data-skill="Process_Engineering">Process Engineering</a>
+        <a class="skill blue-skill" data-skill="c#">c#</a>
+        <a class="skill blue-skill" data-skill="HTML">HTML</a>
+        <a class="skill blue-skill" data-skill="c++">c++</a>
+        <a class="skill blue-skill" data-skill="Windows_Forms">Windows Forms</a>
+        <a class="skill green-skill" data-skill="Design">Design</a>
+        <a class="skill red-skill" data-skill="Finite_Element_Method">Finite Element Method</a>
+        <a class="skill blue-skill" data-skill="Git">Git</a>
+        <a class="skill blue-skill" data-skill="Regular_Expressions">Regular Expressions</a>
+        <a class="skill purple-skill" data-skill="Matlab">Matlab</a>
+        <a class="skill green-skill" data-skill="Leadership_Experience">Leadership Experience</a>
+        <a class="skill red-skill" data-skill="GD&T">GD&T</a>
+        <a class="skill red-skill" data-skill="CAD_Technical_Drawings">CAD Technical Drawings</a>
+        <a class="skill red-skill" data-skill="ABAQUS">ABAQUS</a>
+        <a class="skill red-skill" data-skill="CAD_3D_Modeling">CAD 3D Modeling</a>
+        <a class="skill purple-skill" data-skill="Solidworks_API">Solidworks API</a>
+        <a class="skill blue-skill" data-skill="LINQ">LINQ</a>
+        <a class="skill blue-skill" data-skill="SQL">SQL</a>
+        <a class="skill blue-skill" data-skill="css">css</a>
+        <a class="skill blue-skill" data-skill="Javascript">Javascript</a>
+        <a class="skill red-skill" data-skill="FET_Fabrication">FET Fabrication</a>
+        <a class="skill red-skill" data-skill="FET_Characterization">FET Characterization</a>
+        <a class="skill red-skill" data-skill="Process_Engineering">Process Engineering</a>
       </div>
     </div>
   </div>
