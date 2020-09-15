@@ -2,7 +2,8 @@
 body{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 75vw;
+    margin: auto;
 }
 
 /*Header Class*/
@@ -10,7 +11,7 @@ body{
     background-color: rgb(44, 29, 138);
     padding: 15px;
     margin: 0 auto;
-    width: 100%;
+    width: 75vw;
 }
 
 /*Header Class: p element rules*/
@@ -33,19 +34,20 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 75vw;
 }
 
 /*Detail Class*/
 [class*="detail-"]{
     color: black;
     margin: 5px 0px;
+    padding: 1.5px;
 }
 
 .detail-body{
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 56.25vw;
 }
 
 /*Detail Class: Large Title*/
@@ -54,6 +56,12 @@ body{
     font-size: 5vw;
     background-color: rgb(44, 29, 138);
     color: white;
+}
+
+/*Detail Class: Setting Section (ie Education, Job, ...)*/
+.detail-setting-container{
+    display: flex;
+    flex-direction: column;
 }
 
 /*Detail Class: Section Container*/
@@ -91,19 +99,19 @@ body{
 }
 
 .detail-label-container{
-    float: right;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 1.5vw;
-    align-self: flex-end;
-    margin: 0px;
+    align-self: flex-start;
 }
 
 [class*="label-"]{
     color: black;
     outline-color: black;
     width: fit-content;
+    margin: 2px;
+    padding: 2px;
 }
 
 .label-red{
@@ -111,7 +119,23 @@ body{
 }
 
 .label-green{
-    background-color: greenyellow;
+    background-color: greenyellow;-*
+}
+
+.label-purple{
+    background-color: purple;
+}
+
+.label-blue{
+    background-color: blue;
+    color: white;
+}
+
+img{
+    display: flex;
+    width: 18.75vw;
+    height: auto;
+    margin: 10px 5px;
 }
 
 [class*="menu-"]{
@@ -122,5 +146,49 @@ body{
 .menu-body{
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 18.75vw;
+    margin: 10px 10px;
+}
+
+.menu-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5vw;
+    background-color: rgb(44, 29, 138);
+    color: white;
+    text-align: center;
+}
+
+.menu-list-container{
+    background-color: lightgray;
+}
+
+.menu-list-container ul{
+    list-style-type: none;
+}
+
+.skill{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.skill.active::before {
+    content: '✓';
+    margin-left: 0.5rem;
+  }
+
+.red-skill{
+    background-color: red;
+}
+
+.blue-skill{
+    background-color: blue;
+}
+
+.green-skill{
+    background-color: greenyellow;
+}
+
+.purple-skill{
+    background-color: purple;
 }
