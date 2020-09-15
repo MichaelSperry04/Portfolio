@@ -92,7 +92,8 @@ body{
     width: fit-content;
     font-size: 1.5vw;
     align-self: flex-end;
-    margin: 0px;
+    margin: 0px 2.5px;
+    border-radius: 3px;
 }
 
 .detail-child{
@@ -110,11 +111,12 @@ body{
 }
 
 [class*="label-"]{
-    color: black;
+    color: white;
     outline-color: black;
     width: fit-content;
     margin: 2px;
     padding: 2px;
+    border-radius: 5px;
 }
 
 .label-red{
@@ -122,7 +124,7 @@ body{
 }
 
 .label-green{
-    background-color: greenyellow;-*
+    background-color: rgb(45, 190, 45);
 }
 
 .label-purple{
@@ -130,8 +132,7 @@ body{
 }
 
 .label-blue{
-    background-color: blue;
-    color: white;
+    background-color: rgb(0, 119, 255);
 }
 
 img{
@@ -151,7 +152,7 @@ img{
     display: flex;
     flex-direction: column;
     width: 25%;
-    margin: 10px 0px;
+    margin: 0px;
 }
 
 .menu-title{
@@ -166,8 +167,10 @@ img{
 .menu-list-container{
     background-color: lightgray;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     box-shadow: 2.5px 2.5px 5px gray;
+    justify-content: left;
+    align-content: left;
 }
 
 .menu-list-container ul{
@@ -177,24 +180,32 @@ img{
 .skill{
     color: white;
     font-size: 1.5vw;
-    text-align: center;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px 0px;
 }
 
-.skill.active::before {
+.skill.active::after {
     content: '✓';
-    margin-left: 0.5rem;
-  }
+    margin-right: 0.5rem;
+}
+
+.skill:hover{
+    cursor: pointer;
+    color: black;
+    filter: invert(.0001);
+}
 
 .red-skill{
     background-color: red;
 }
 
 .blue-skill{
-    background-color: blue;
+    background-color: rgb(0, 119, 255);
 }
 
 .green-skill{
-    background-color: greenyellow;
+    background-color: rgb(45, 190, 45);
 }
 
 .purple-skill{
