@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, intial-scale=1.0">
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,6 +14,8 @@
   $(document).ready(function () {
     $('a.skill').click(function () {
       $('*').show();
+      $('head').hide();
+      $('script').hide();
       $(this).toggleClass("active");
       if ($('a.skill').hasClass("active")) {
         $("div.detail-child").hide();
@@ -374,7 +377,7 @@
 
     <div class="menu-body">
       <img src="Pic.jpg">
-
+      
       <div class="menu-title">Skills and Abilities</div>
       <div class="menu-list-container">
         <ul>
