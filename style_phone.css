@@ -7,9 +7,9 @@
 /*Header Class*/
 .header{
     background-color: rgb(44, 29, 138);
-    padding: 0px 15px;
-    margin: 5px auto;
-    width: 75vw;
+    padding: 15px;
+    margin: 10px auto;
+    width: 90vw;
     box-shadow: 2.5px 2.5px 5px gray;
 }
 
@@ -17,7 +17,7 @@
 .header p{
     color: lightgray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.5vw;
+    font-size: 2vw;
     text-align: left;
 }
 
@@ -25,7 +25,7 @@
 .header h1{
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3vw;
+    font-size: 6vw;
 }
 
 .Web-body{
@@ -33,7 +33,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: row;
-    width: 75vw;
+    width: 90vw;
     margin: 0 auto;
 }
 
@@ -47,13 +47,13 @@
 .detail-body{
     display: flex;
     flex-direction: column;
-    width: 56.25vw;
+    width: 67.5vw;
 }
 
 /*Detail Class: Large Title*/
 .detail-title{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3vw;
+    font-size: 5vw;
     background-color: rgb(44, 29, 138);
     color: white;
     box-shadow: 2.5px 2.5px 5px gray;
@@ -75,11 +75,11 @@
 
 /*Detail Class: Section Title*/
 .detail-flex-title{
-    font-size: 2.25vw;
+    font-size: 4vw;
 }
 
 .detail-parent{
-    font-size: 2vw;
+    font-size: 3vw;
     display: flex;
     flex-direction: column;
 }
@@ -96,7 +96,7 @@
 }
 
 .detail-child{
-    font-size: 2vw;
+    font-size: 2.5vw;
     display: flex;
     flex-direction: column;
 }
@@ -156,7 +156,7 @@ img{
 
 .menu-title{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2vw;
+    font-size: 2.5vw;
     background-color: rgb(44, 29, 138);
     color: white;
     text-align: center;
@@ -168,8 +168,7 @@ img{
     display: flex;
     flex-direction: column;
     box-shadow: 2.5px 2.5px 5px gray;
-    justify-content: left;
-    align-content: left;
+    align-items: left;
 }
 
 .menu-list-container ul{
