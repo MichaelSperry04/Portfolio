@@ -14,7 +14,7 @@
 <script>
   $(document).ready(function () {
     $('a.skill').click(function () {
-      $('*').show();
+      $('*').not($('.pic')).show();
       $('head').hide();
       $('script').hide();
       window.scrollTo(0,0)
@@ -58,6 +58,40 @@
       })
     });
   });
+
+  $(document).ready(function (){
+    $('a.prev').click(function (){
+      var pics = $('div.pic');
+      var activepic = pics.index($('.pic-active'));
+      var scrollpic = activepic - 1;
+      if(scrollpic < 0){
+        scrollpic = pics.length - 1;
+      }
+      if(scrollpic > pics.length){
+        scrollpic = 0;
+      }
+
+      pics[activepic].classList.replace('pic-active','pic-hide');
+      pics[scrollpic].classList.replace('pic-hide','pic-active');
+    })
+  })
+
+  $(document).ready(function (){
+    $('a.next').click(function (){
+      var pics = $('div.pic');
+      var activepic = pics.index($('.pic-active'));
+      var scrollpic = activepic + 1;
+      if(scrollpic < 0){
+        scrollpic = pics.length - 1;
+      }
+      if(scrollpic >= pics.length){
+        scrollpic = 0;
+      }
+
+      pics[activepic].classList.replace('pic-active','pic-hide');
+      pics[scrollpic].classList.replace('pic-hide','pic-active');
+    })
+  })
 </script>
 
 <body>
@@ -496,22 +530,10 @@
               </div>
             </div>
           </div>
-          <div class="detail-parent">lectronic Skateboards
+          <div class="detail-parent">Electronic Skateboards
             <ul>
               <div class="detail-child" data-skills="Design CAD_3D_Modeling">
                 <li>Have built 2 custom E-Skate boards</li>
-                <div class="detail-label-container">
-                  <span class="label-red">Design</span>
-                  <span class="label-red">CAD 3D Modeling</span>
-                </div>
-              </div>
-            </ul>
-          </div>
-          <div class="detail-parent">Pinball Machine Repair
-            <ul>
-              <div class="detail-child" data-skills="Design CAD_3D_Modeling">
-                <li>Attempting Repair of Family Owned F-14 Tomcat Pinball Machine
-                </li>
                 <div class="detail-label-container">
                   <span class="label-red">Design</span>
                   <span class="label-red">CAD 3D Modeling</span>
@@ -524,7 +546,20 @@
     </div>
 
     <div class="menu-body">
-      <img src="Pic1.JPG">
+      <div class="pic-container">
+        <a class="prev">&#10094;</a>
+        <div class="pic pic-active">
+          <img src="Pic1.JPG">
+        </div>
+        <div class="pic pic-hide">
+          <img src="Pic2.jpg">
+        </div>
+        <div class="pic pic-hide">
+          <img src="Pic3.jpg">
+        </div>
+        <a class="next">&#10095;</a>
+      </div>
+      
       <div class="menu-title">Skills and Abilities</div>
       <div class="menu-title">Engineering</div>
       <div class="menu-list-container">
